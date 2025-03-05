@@ -4,8 +4,8 @@
 int main() {
 
     int populacao, turista, populacao2, turista2;
-    char estado[20], nome[20], codigo[20], estado2[20], nome2[20], codigo2[20];
-    float pib, area, pib2, area2;
+    char estado[10], nome[20], codigo[5], estado2[10], nome2[20], codigo2[5];
+    float pib, area, pib2, area2, desidade, ppc, desidade2, ppc2;
 
     printf("Para o desafio do Super Trufo insira as seguintes informações: \n");
     
@@ -31,6 +31,11 @@ int main() {
     printf("Número de Turistas: ");
     scanf("%d", &turista);
 
+    desidade = populacao / area;
+    ppc = pib / populacao;
+
+
+
     printf("\nInsira as informações da segunda carta: \n");
 
     printf("Estado: ");
@@ -54,9 +59,16 @@ int main() {
     printf("Número de Turistas: ");
     scanf("%d", &turista2);
 
+    desidade2 = populacao2 / area2;
+    ppc2 = pib2 / populacao2;
+    
+
 
     printf("\nAs cartas são as seguinte:\n");
     
-    printf("\nEstado: %s\nCodigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nNumero de turistas: %d\n", estado, codigo,nome,populacao,area,pib,turista);
-    printf("\nEstado: %s\nCodigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nNumero de turistas: %d\n", estado2, codigo2,nome2,populacao2,area2,pib2,turista2);
+    printf("\n***Primeira Carta***\n");
+    printf("\nEstado: %s\nCodigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %.2f KM²\nPIB: %.2f bilhões de reais\nNumero de turistas: %d\ndesidade populacional: %.2f hab/km²\nPIB Per Capita: %.2f reais\n", estado, codigo,nome,populacao,area,pib,turista,desidade, ppc);
+    printf("\n***Segunda Carta***\n");
+    printf("\nEstado: %s\nCodigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %.2f KM²\nPIB: %.2f bilhões de reais\nNumero de turistas: %d\ndesidade populacional: %.2f hab/km²\nPIB Per Capita: %.2f reais\n", estado2, codigo2,nome2,populacao2,area2,pib2,turista2,desidade2,ppc2);
+
 }
