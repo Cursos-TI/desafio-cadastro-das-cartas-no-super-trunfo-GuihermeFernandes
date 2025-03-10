@@ -63,7 +63,6 @@ int main() {
     ppc2 = pib2 / populacao2;
     
 
-
     printf("\nAs cartas são as seguinte:\n");
     
     printf("\n***Primeira Carta***\n");
@@ -71,4 +70,24 @@ int main() {
     printf("\n***Segunda Carta***\n");
     printf("\nEstado: %s\nCodigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %.2f KM²\nPIB: %.2f bilhões de reais\nNumero de turistas: %d\ndesidade populacional: %.2f hab/km²\nPIB Per Capita: %.2f reais\n", estado2, codigo2,nome2,populacao2,area2,pib2,turista2,desidade2,ppc2);
 
+
+    printf("\n***O resultado das compracoes***\n");
+
+    int resultadopopulacao;
+    int resultadoarea;
+    int resultadopib;
+    int resultadoturistas;
+    int resultadodensidade;
+    int resultadoppc;
+    
+    resultadoarea = area > area2;
+    resultadopopulacao = populacao > populacao2;
+    resultadopib = pib > pib2;
+    resultadoturistas = turista > turista2;
+    resultadodensidade = desidade < desidade2;
+    resultadoppc = ppc > ppc2;
+
+    printf("A carta um e maior que a carta dois em populacao? %d\nA carta um e maior que a carta dois em area? %d\nA carta um e maior que a carta dois em PIB? %d\nA carta um  e maior que a carta dois em turistas? %d\nA carta um e menor que a carta dois em densidade populacional %d\nA carta um e maior que a carta dois em PIB Per Capita? %d\n", resultadopopulacao, resultadoarea, resultadopib, resultadoturistas, resultadodensidade, resultadoppc);
+
+return 0;
 }
